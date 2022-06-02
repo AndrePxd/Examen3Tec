@@ -1,0 +1,43 @@
+.navbar-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+}
+
+.navbar-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    ;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-item.first {
+    margin-left: auto;
+}
+
+.nav-item.last {
+    margin-right: auto;
+}
+
+.navbar li {
+    align-content: center;
+    border-right: 1px solid rgb(80, 80, 80);
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+.navbar a:active {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.active {
+    color: #ffffff !important;
+}
