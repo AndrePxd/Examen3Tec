@@ -14,6 +14,8 @@ import { ReservasComponent } from './componentes/reservas/reservas.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ServiciosComponent } from './componentes/servicios/servicios.component';
 import { ContactosComponent } from './componentes/contactos/contactos.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { ContactosComponent } from './componentes/contactos/contactos.component'
     HomeComponent,
     ServiciosComponent,
     ContactosComponent,
+    NavbarComponent,
+    FooterComponent,
 
   ],
   imports: [
