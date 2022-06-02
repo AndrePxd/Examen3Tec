@@ -15,6 +15,7 @@ export class EditarEmpleadoComponent implements OnInit {
     private activeRoute:ActivatedRoute,
     private crudeService:CrudService,
     public formulario:FormBuilder,
+    private ruteador:Router
   ) { 
     this.elId=this.activeRoute.snapshot.paramMap.get('id');
     console.log(this.elId);
@@ -35,6 +36,13 @@ export class EditarEmpleadoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  enviarDatos():any{
+    console.log(this.elId);
+    console.log(this.formularioDeEmpleados.value);
+    this.crudeService.EditarEmpleado(this.elId,this.formularioDeEmpleados.value).subscribe(()=>{
+      this.ruteador.navigateByUrl('/listar-empleado');
+    });
   }
 
 

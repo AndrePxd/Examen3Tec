@@ -3,7 +3,7 @@
         Editar empleado
     </div>
     <div class="card-body">
-       <form [formGroup]="formularioDeEmpleados">
+       <form [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
         <div class="mb-3">
           <label for="" class="form-label">Nombre:</label>
           <input type="text"
@@ -16,7 +16,7 @@
         </div>
 
         <div class="btn-group" role="group">
-            <button type="button" class="btn btn-success">Agregar</button>
+            <button type="submit" class="btn btn-success">Agregar</button>
             <button type="button" class="btn btn-primary">Cancelar</button>
         </div>
        </form>
