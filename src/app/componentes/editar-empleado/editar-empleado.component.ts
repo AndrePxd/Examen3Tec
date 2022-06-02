@@ -25,13 +25,15 @@ export class EditarEmpleadoComponent implements OnInit {
         console.log(respuesta);
         this.formularioDeEmpleados.setValue({
           nombre:respuesta[0]['nombre'],
-          correo:respuesta[0]['correo']
+          correo:respuesta[0]['correo'],
+          cargo:respuesta[0]['cargo']
         })
       }
     );
     this.formularioDeEmpleados=this.formulario.group({
       nombre:[''],
-      correo:['']
+      correo:[''],
+      cargo:['']
     })
   }
 
@@ -44,6 +46,4 @@ export class EditarEmpleadoComponent implements OnInit {
       this.ruteador.navigateByUrl('/listar-empleado');
     });
   }
-
-
 }

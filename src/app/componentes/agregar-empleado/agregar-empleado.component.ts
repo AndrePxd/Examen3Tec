@@ -19,7 +19,8 @@ export class AgregarEmpleadoComponent implements OnInit {
     ){ 
     this.formularioDeEmpleados=this.formulario.group({
       nombre:[''],
-      correo:['']
+      correo:[''],
+      cargo:['']
     })
   }
 

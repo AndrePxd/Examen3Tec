@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'agregar-empleado',component:AgregarEmpleadoComponent},
   {path: 'listar-empleado',component:ListarEmpleadoComponent},
   {path: 'editar-empleado/:id',component:EditarEmpleadoComponent},
-  {path: 'plantel',component:PlantelComponent},
+  {path: 'plantel',component:ListarEmpleadoComponent},
   {path:'cirugia',component:CirugiasComponent},
   {path:'reserva', component:ReservasComponent},
   {path:'home',component:HomeComponent},

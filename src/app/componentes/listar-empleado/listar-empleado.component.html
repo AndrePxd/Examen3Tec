@@ -1,15 +1,18 @@
 <div class="card">
     <div class="card-header">
-        Empleados
+         <a class="btn btn-success" routerLink="/agregar-empleado/">Agregar Empleado</a> 
     </div>
     <div class="card-body">
+        <h1> Lista empleados  </h1>
         <table class="table">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Correo</th>
+                    <th>Cargo</th>
                     <th>Acciones</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +20,8 @@
                     <td>{{empleado.id}}</td>
                     <td>{{empleado.nombre}}</td>
                     <td>{{empleado.correo}}</td>
+                    <td>{{empleado.cargo}}</td>
+                    
                     <td>
                        <a class="btn btn-info" routerLink="/editar-empleado/{{empleado.id}}">Editar</a> 
                         <a name="" id="" class="btn btn-danger" (click)="borrarRegistro(empleado.id,iControl)" role="button">Borrar</a> 
