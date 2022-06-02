@@ -1,0 +1,56 @@
+<div class="card-group">
+    <div class="card">
+      <img src="https://esdoctor.com/wp-content/uploads/2019/06/implante-dental1-e1561160884930.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cirugia dental de implantes</h5>
+        <p class="card-text">A través de esta operación dental, se reemplazan dientes dañados o perdidos por otros artificiales que actúan como si se tratara de piezas dentales naturales.</p>
+        <p class="card-text"><small class="text-muted">Especialista: Ivan Zabala</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://clinicadentalnunogil.com/wp-content/uploads/2017/09/estetica-dental.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cirugía dental cosmética</h5>
+        <p class="card-text">Bajo este campo de la cirugía bucal se engloban las intervenciones cuyo objetivo es mejorar la belleza de la sonrisa, mediante el uso de implantes dentales, la colocación de carillas o el alargamiento de la corona.</p>
+        <p class="card-text"><small class="text-muted">Especialista: Carlos Zarate</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://drlalinde.es/wp-content/uploads/defcecto-mandibular-precio.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cirugía mandibular correctiva</h5>
+        <p class="card-text">Ante desórdenes temporomandibulares, el dentista puede optar por la cirugía dental enfocada a corregir el encaje entre la mandíbula superior y la inferior, así como favorecer la fijación de las dentaduras.</p>
+        <p class="card-text"><small class="text-muted">Especialista: Luis Felipe Perez</small></p>
+      </div>
+    </div>
+  </div>
+<div class="card">
+
+    <div class="card-header">
+        Cirugia-consultas
+    </div>
+    <div class="card-body">
+       <form [formGroup]="formularioDeCirugias"  (ngSubmit)="enviarDatos()">
+        <div class="mb-3">
+          <label for="" class="form-label">Nombre:</label>
+          <input type="text"
+            class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe el nombre">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Correo: </label>
+          <input type="text"
+            class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId" placeholder="Escribe el correo">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Especialista: </label>
+            <input type="text"
+              class="form-control" name="" formControlName="especialista" id="" aria-describedby="helpId" placeholder="Especialista">
+          </div>
+
+        <div class="btn-group" role="group">
+            <button type="submit" class="btn btn-success">Realizar consulta</button>
+            <button type="button" class="btn btn-primary">Cancelar</button>
+        </div>
+       </form>
+    </div>
+</div>
