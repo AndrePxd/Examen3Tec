@@ -10,7 +10,7 @@ import { Reserva } from './Reserva';
   providedIn: 'root'
 })
 export class CrudService {
-  API:string='http://localhost/Empleados/'; //api de php
+  API:string='http://localhost/Centro/'; //api de php
 
   constructor(private clientHttp:HttpClient) { }
 
@@ -29,4 +29,11 @@ export class CrudService {
   ObtenerEmpleados(){
     return this.clientHttp.get(this.API);
   }
+  BorrarEmpleado(id:any):Observable<any>{
+    return this.clientHttp.get(this.API+"?borrar="+id);
+  }
+  ObtenerEmpleado(id:any):Observable<any>{
+    return this.clientHttp.get(this.API+"?consultar="+id);
+  }
+
 }
