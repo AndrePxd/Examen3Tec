@@ -34,18 +34,53 @@
         <div class="mb-3">
           <label for="" class="form-label">Nombre:</label>
           <input type="text"
-            class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe el nombre">
+            class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe su nombre">
         </div>
         <div class="mb-3">
           <label for="" class="form-label">Correo: </label>
           <input type="text"
-            class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId" placeholder="Escribe el correo">
+            class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId" placeholder="Escribe su correo">
         </div>
+
+        <label for="" class="form-label">Cirugias: </label>
+        <div *ngFor="let cirugia of cirugias">
+          <input 
+          type="radio"
+          name="cir"
+          value="{{cirugia}}"
+          (change)="radioChangeHandler($event)">
+          <i>{{cirugia}}</i>
+        </div>
+        &nbsp;
         <div class="mb-3">
-            <label for="" class="form-label">Especialista: </label>
-            <input type="text"
-              class="form-control" name="" formControlName="especialista" id="" aria-describedby="helpId" placeholder="Especialista">
+            <label for="" class="form-label">Especialidad: </label>
+            <fieldset disabled>
+            <input type="text" ngModel="{{selectCirugia}}" 
+              class="form-control" name="" desabled formControlName="especialista" id="" aria-describedby="helpId" placeholder="Especialista">
+            </fieldset>
+            </div>
+          <!--
+          <div class="form-group">
+            <label>Tipo de cirugia</label>
+            <div class="form-group">
+              <label class="radio-inline">
+                <input type="radio" value="CDI" name="CIR" [ngModel]="CIR">
+                Cirugia dental de implantes
+              </label>
+              &nbsp;
+              <label class="radio-inline">
+                <input type="radio" value="CDC" name="CIR" ngModel="CIR">
+                Cirugía dental cosmética
+              </label>
+              &nbsp;
+              <label class="radio-inline">
+                <input type="radio" value="CMC" name="CIR" ngModel="CIR">
+                  Cirugía mandibular correctiva
+              </label>
+            </div>
           </div>
+        -->
+     
 
         <div class="btn-group" role="group">
             <button type="submit" class="btn btn-success">Realizar consulta</button>

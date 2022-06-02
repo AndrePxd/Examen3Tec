@@ -8,7 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./cirugias.component.css']
 })
 export class CirugiasComponent implements OnInit {
-
+  selectCirugia: string ='';
+  cirugias: any =[
+    'Cirugia dental de implantes-Ivan Zabala',
+    'Cirugía dental cosmética-Carlos Zarate',
+    'Cirugía mandibular correctiva-Luis Felipe Perez'
+  ];
+ 
   formularioDeCirugias:FormGroup;
 
   constructor(
@@ -29,7 +35,12 @@ export class CirugiasComponent implements OnInit {
     console.log("Funciona");
     console.log(this.formularioDeCirugias.value);
     this.crudService.AgregarCirugia(this.formularioDeCirugias.value).subscribe();
+
    // this.ruteador.navigateByUrl('/listar-empleado')
+  }
+
+  radioChangeHandler (event:any){
+    this.selectCirugia =event.target.value;
   }
 
 
