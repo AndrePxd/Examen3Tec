@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contactos',
-  templateUrl: './contactos.component.html',
-  styleUrls: ['./contactos.component.css']
+  selector: 'app-contacto',
+  templateUrl: './contacto.component.html',
+  styleUrls: ['./contacto.component.css']
 })
-export class ContactosComponent implements OnInit {
+export class ContactoComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  envio() {
+    alert("Se envio correctamente el mensaje");
+  }
 }
